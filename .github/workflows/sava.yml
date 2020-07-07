@@ -1,0 +1,14 @@
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: fz6m/weixin-article-save@master
+        env:
+          TOKEN: ${{ github.token }}
+          REPOSITORY: ${{ github.repository }}
+          NAME: fz6m
+          EMAIL: fz6meng@gmail.com 
